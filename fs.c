@@ -49,9 +49,11 @@ void EraseSector(char n) {
     fclose(pt);                         //close file
 }
 void EraseAllSectors() {                //no need to checkfile as every single sector will check
-    for(i = 0; i < NUM_SECTORS; i++){   //iterate over all sectors
-        EraseSector(i);                 //erase that sector
+    pt = fopen(FNAME,"wb");
+    for(j = 0; j < SECTOR_SIZE*NUM_SECTORS; j++){
+        fputc(0xFF,pt);
     }
+    fclose(pt);
 }
 unsigned short ReadWord(unsigned long long nAddress){
     unsigned short ret;                          //return value
