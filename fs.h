@@ -1,3 +1,15 @@
+/*
+OS development - COMP 3500
+Project 1 - Pseudo drivers
+02-17-2020
+
+Alex Jones
+Yeonseo Ju
+Ryan McGill
+Kegan Vanginkel
+Yadi Zhong
+*/
+
 #include <stdio.h> 
 
 void EraseSector(char n);
